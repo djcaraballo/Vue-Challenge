@@ -19,12 +19,12 @@ export default {
 </script>
 
 <style>
-/*#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Thasadith');
+
+#app {
+  color: #ffffff;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}*/
+  font-family: 'Alex Brush', cursive;
+  font-size: 2em;  
+}
 </style>
