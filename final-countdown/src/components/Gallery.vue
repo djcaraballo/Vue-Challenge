@@ -1,6 +1,6 @@
 <template id="gallery-template">
-  <div>
-    <div v-for="image in images">
+  <div class="images-container">
+    <div v-for="image in images" class="image">
       <img :src="image"></img>
     </div>
   </div>
@@ -41,19 +41,14 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<!-- <style scoped>
-h3 {
-  margin: 40px 0 0;
+<style scoped>
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.image {
+  margin: 1em;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style> -->
+</style>
