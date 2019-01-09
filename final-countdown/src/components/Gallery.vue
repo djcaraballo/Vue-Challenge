@@ -49,15 +49,16 @@ export default {
   width: 90%;
   margin: auto; 
   border: 20px #cecece solid;
+  justify-content: center;
 }
 
 img {
   border-radius: 10px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .image {
   margin: 1em;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 </style>

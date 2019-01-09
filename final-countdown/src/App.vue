@@ -19,8 +19,12 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Thasadith');
+
 #app {
   color: #ffffff;
   text-align: center;
+  font-family: 'Alex Brush', cursive;
+  font-size: 2em;  
 }
 </style>
