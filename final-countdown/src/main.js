@@ -21,6 +21,11 @@ const Gallery = {
       axios.get(`${baseUrl}/image?apikey=d4537190-135f-11e9-baea-f75a4720f151`).then(response => {
         this.posts = response.data.records
         this.posts.forEach(post => console.log(post.baseimageurl))
+        this.posts.forEach(post => this.images.push(`${post.baseimageurl}?height=500&width=500`))
+        console.log(this.images)
+        console.log(this.posts)
+      }).catch(error => {
+        console.log(error)
       })
     }
   }
