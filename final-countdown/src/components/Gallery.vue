@@ -30,8 +30,8 @@ export default {
         this.posts = response.data.records
         this.posts.forEach(post => console.log(post.baseimageurl))
         this.posts.forEach(post => this.images.push(`${post.baseimageurl}?height=500&width=500`))
-        console.log(this.images)
-        console.log(this.posts)
+        // console.log(this.images)
+        // console.log(this.posts)
       }).catch(error => {
         console.log(error)
       })
@@ -40,15 +40,24 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .images-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  background-color: #eecf6e;
+  width: 90%;
+  margin: auto; 
+  border: 20px #cecece solid;
+}
+
+img {
+  border-radius: 10px;
 }
 
 .image {
   margin: 1em;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 </style>
