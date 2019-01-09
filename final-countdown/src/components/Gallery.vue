@@ -1,6 +1,12 @@
 <template id="gallery-template">
   <div class="images-container">
-    <div v-for="image in images" class="image">
+    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <div 
+      v-for="(image, imageIndex) in images" 
+      class="image"
+      :key="imageIndex"
+      @click="index = imageIndex"
+      :style="image">
       <img :src="image"></img>
     </div>
   </div>
@@ -9,6 +15,7 @@
 <script>
 import axios from 'axios'
 import { apikey } from '../../apikey'
+import VueGallery from 'vue-gallery';
 
 const baseUrl = "https://api.harvardartmuseums.org"
 
@@ -19,7 +26,8 @@ export default {
     message: "",
     posts: [],
     images: [],
-    search: ""
+    search: "",
+    index: null
   }),
   mounted() {
     this.getPosts()
@@ -36,6 +44,9 @@ export default {
         console.log(error)
       })
     }
+  },
+  components: {
+    'gallery': VueGallery
   }
 }
 </script>
@@ -58,7 +69,14 @@ img {
 }
 
 .image {
-  margin: 1em;
+  margin: 0.5em;
   border-radius: 10px;
+
+  float: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /*border: 1px solid #ebebeb;*/
+  /*margin: 5px;*/
 }
 </style>
