@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import { apikey } from '../apikey'
 
 Vue.config.productionTip = false
 
